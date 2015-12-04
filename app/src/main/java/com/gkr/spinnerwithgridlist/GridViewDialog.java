@@ -50,7 +50,7 @@ public class GridViewDialog extends Dialog {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ((MainActivity) mContext).setIndex(position);
+                ((MainActivity) mContext).setTxtIndex(position,mStrings[position]);
                 dismiss();
             }
         });

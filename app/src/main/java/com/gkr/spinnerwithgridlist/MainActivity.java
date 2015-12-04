@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView txtView;
     String[] mString = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"};
     int index = 0;
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView txtView = (TextView) findViewById(R.id.txt_view);
+        txtView = (TextView) findViewById(R.id.txt_view);
         txtView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     /*
     * Set the selected index of grid view
     * */
-    public void setIndex(int mIndex) {
+    public void setTxtIndex(int mIndex, String mTxt) {
         this.index = mIndex;
+        txtView.setText(mTxt);
     }
 }
